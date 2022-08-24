@@ -26,3 +26,31 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     depositInput.value = '';
 
 });
+
+// handel withdraw event handeler  
+document.getElementById('withdraw-button').addEventListener('click', function () {
+
+    const withdrawInput = document.getElementById('withdraw-input');
+    const withdrawAmountText = withdrawInput.value;
+    const newwithdrawAmount = parseFloat(withdrawAmountText);
+
+    // set withdraw total 
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdeawTest = withdrawTotal.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdeawTest);
+
+    const newWithdrawTotal = previousWithdrawTotal + newwithdrawAmount;
+    withdrawTotal.innerText = newWithdrawTotal;
+    // clear the withdraw input field 
+    withdrawInput.value = '';
+
+
+    // update account balance 
+    const balanceTotal = document.getElementById('balance-total');
+    const previousBalanceText = balanceTotal.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceText);
+
+    const newBalanceTotal = previousBalanceTotal - newwithdrawAmount;
+    balanceTotal.innerText = newBalanceTotal;
+
+});
