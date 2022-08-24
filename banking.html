@@ -11,13 +11,15 @@
 
 <body>
     <header>
-        <h2 class="text-3xl text-center mt-16 ">Let's Get Some <span class="font-semibold text-purple-600 ">Moooooney</span>
+        <h2 class="text-3xl text-center mt-16 ">Let's Get Some <span
+                class="font-semibold text-purple-600 ">Moooooney</span>
             !!!</h2>
     </header>
 
-    <main>
+    <main class="w-3/4 mx-auto">
+        <!-- balance and transaction -->
         <section class="mt-8">
-            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+            <div class="grid grid-cols-3 gap-4  text-white">
                 <div class="bg-blue-400 p-8 rounded">
                     <h3 class="text-2xl">Deposit</h3>
                     <h4 class="text-4xl">$00</h4>
@@ -29,6 +31,30 @@
                 <div class="bg-yellow-400 p-8 rounded">
                     <h3 class="text-2xl">Balance</h3>
                     <h4 class="text-4xl">$1240</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- deposit and withdraw  -->
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl">Please Deposit</h3>
+                    <div>
+                        <input id="deposit-input" class="border-2 border-gray-400 rounded block mb-3 px-2 w-3/4"
+                            type="password" placeholder="$ amount you want to deposit">
+                        <button id="deposit-button"
+                            class="bg-yellow-400 px-4 py-2 rounded text-white font-medium">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl">Please Withdraw</h3>
+                    <div>
+                        <input id="withdraw-input" class="border-2 border-gray-400 rounded block mb-3 px-2 w-3/4"
+                            type="password" placeholder="$ amount you want to withdraw">
+                        <button id="withdraw-button"
+                            class="bg-yellow-400 px-4 py-2 rounded text-white font-medium">withdraw</button>
+                    </div>
                 </div>
             </div>
         </section>
